@@ -1,0 +1,6 @@
+@Tool("测试")
+public String ma(
+            @P("测试") String a
+    ){
+  return a;
+}

@@ -1,0 +1,129 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: agent
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/agent_01?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: 123456
+      database: 10
+      timeout: 10000ms
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  type-aliases-package: com.tianji.agent.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: assign_id
+      update-strategy: not_null
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# springdoc-openapi
+springdoc:
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+
+# JWT
+agent:
+  jwt:
+    user-secret-key: dGhlLWFnZW50LXN5c3RlbS1qd3Qtc2VjcmV0LWtleS1mb3ItaG1hYy1zaGEyNTY=
+    user-ttl: 7200000
+    user-token-name: Authorization
+    exclude-paths:
+      - /api/login
+      - /api/login/**
+  upload:
+    # 头像文件存储目录
+    avatar-dir: static/uploads/avatars
+  tools:
+    # 工具代码文件存储根目录
+    storage-dir: data/tools
+  knowledgebase:
+    # 知识库文件存储根目录
+    storage-dir: data/knowledgebase
+    # AI助手知识库文档目录（与管理系统知识库完全分离）
+    ai-document-subdir: ai-documents
+    # 管理系统知识库文档子目录（仅用于管理系统）
+    document-subdir: document
+    splitter:
+      # 文档分割最大段大小（字符数）
+      max-segment-size: 500
+      # 文档分割重叠大小（字符数）
+      max-overlap-size: 100
+    retriever:
+      # 检索最小相似度阈值（0.0~1.0）
+      min-score: 0.5
+      # 检索最大返回结果数
+      max-results: 3
+    memory:
+      # 会话记忆最大保留消息数
+      max-messages: 20
+      # 会话记忆过期时间（秒），与JWT user-ttl保持一致，默认7200秒=2小时
+      ttl-seconds: 7200
+
+# Redis 工具配置
+redis:
+  utils:
+    default-timeout: 3600
+
+# knife4j
+knife4j:
+  enable: true
+  production: false
+  setting:
+    language: zh-CN
+    enable-footer-custom: true
+    footer-custom-content: "\u00A9 2026 xuyongan Agent. All rights reserved."
+
+# LangChain4j - AI 模型配置
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
+      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      model-name: qwen3.7-max-2026-06-08 # 模型名称
+      log-requests: true
+      log-responses: true
+    streaming-chat-model:
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
+      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      model-name: qwen3.7-max-2026-06-08 # 模型名称
+      log-requests: true
+      log-responses: true
+    embedding-model:
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
+      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      model-name: qwen3.7-text-embedding # 模型名称
+      log-requests: true
+      log-responses: true
+      max-segments-per-batch: 10 # 每个批次最大段数
+
+# 日志级别
+logging:
+  level:
+    dev.langchain4j: debug
