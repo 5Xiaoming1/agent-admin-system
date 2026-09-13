@@ -288,4 +288,4 @@ AI 对话
 
 ## 许可证
 
-© 2026 xuyongan Agent. All rights reserved.
+© 2026 xya Agent. All rights reserved.

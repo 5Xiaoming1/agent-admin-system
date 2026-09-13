@@ -51,7 +51,7 @@ springdoc:
 # JWT
 agent:
   jwt:
-    user-secret-key: dGhlLWFnZW50LXN5c3RlbS1qd3Qtc2VjcmV0LWtleS1mb3ItaG1hYy1zaGEyNTY=
+    user-secret-key: # 用户JWT密钥
     user-ttl: 7200000
     user-token-name: Authorization
     exclude-paths:
@@ -98,26 +98,26 @@ knife4j:
   setting:
     language: zh-CN
     enable-footer-custom: true
-    footer-custom-content: "\u00A9 2026 xuyongan Agent. All rights reserved."
+    footer-custom-content: "\u00A9 2026 xya Agent. All rights reserved."
 
 # LangChain4j - AI 模型配置
 langchain4j:
   open-ai:
     chat-model:
       base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      api-key: # ApiKey
       model-name: qwen3.7-max-2026-06-08 # 模型名称
       log-requests: true
       log-responses: true
     streaming-chat-model:
       base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      api-key: # ApiKey
       model-name: qwen3.7-max-2026-06-08 # 模型名称
       log-requests: true
       log-responses: true
     embedding-model:
       base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      api-key: # ApiKey
       model-name: qwen3.7-text-embedding # 模型名称
       log-requests: true
       log-responses: true

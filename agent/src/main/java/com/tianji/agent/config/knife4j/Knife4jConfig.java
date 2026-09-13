@@ -18,8 +18,8 @@ public class Knife4jConfig {
                         .version("v1.0.0")
                         .description("Agent管理系统 RESTful API 接口文档")
                         .contact(new Contact()
-                                .name("徐永安")
-                                .email("support@xuyongan.com")));
+                                .name("xya")
+                                .email("support@xya.com")));
     }
 
     @Bean
