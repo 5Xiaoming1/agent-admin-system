@@ -67,6 +67,8 @@ embedding-store.json
 .env.*.local
 application-local.yaml
 application-local.yml
+application_local.yaml
+application_dev.yaml
 application-dev.yaml
 application-dev.yml
 *.key

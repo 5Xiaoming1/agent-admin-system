@@ -11,13 +11,13 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/agent_01?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: ${spring.datasource.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
       host: localhost
       port: 6379
-      password: 123456
+      password: ${data.redis.password}
       database: 10
       timeout: 10000ms
   jackson:
@@ -51,7 +51,7 @@ springdoc:
 # JWT
 agent:
   jwt:
-    user-secret-key: # 用户JWT密钥
+    user-secret-key: ${jwt.user-secret-key}
     user-ttl: 7200000
     user-token-name: Authorization
     exclude-paths:
@@ -104,20 +104,20 @@ knife4j:
 langchain4j:
   open-ai:
     chat-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: # ApiKey
+      base-url: ${langchain4j.open-ai.chat-model.base-url}
+      api-key: ${langchain4j.open-ai.chat-model.api-key}
       model-name: qwen3.7-max-2026-06-08 # 模型名称
       log-requests: true
       log-responses: true
     streaming-chat-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: # ApiKey
+      base-url: ${langchain4j.open-ai.chat-model.base-url}
+      api-key: ${langchain4j.open-ai.chat-model.api-key}
       model-name: qwen3.7-max-2026-06-08 # 模型名称
       log-requests: true
       log-responses: true
     embedding-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: # ApiKey
+      base-url: ${langchain4j.open-ai.embedding-model.base-url}
+      api-key: ${langchain4j.open-ai.embedding-model.api-key}
       model-name: qwen3.7-text-embedding # 模型名称
       log-requests: true
       log-responses: true
