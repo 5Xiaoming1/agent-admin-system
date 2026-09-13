@@ -1,0 +1,84 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/.mvnExtension.xml
+.mvn/maven-wrapper.jar
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!.mvn/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# IDE - VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Uploads and User Generated Files
+static/uploads/
+data/
+
+# AI Data
+ai-embedding-store.json
+embedding-store.json
+
+# Environment and Secrets
+.env
+.env.local
+.env.*.local
+application-local.yaml
+application-local.yml
+application-dev.yaml
+application-dev.yml
+*.key
+*.pem
+*.crt
+
+# JProfiler
+.jprofiler
+
+# VisualVM
+hs_err_pid*
+replay_pid*
+
+# Spring Boot
+spring-boot-devtools.properties
