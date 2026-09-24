@@ -98,26 +98,26 @@ knife4j:
   setting:
     language: zh-CN
     enable-footer-custom: true
-    footer-custom-content: "\u00A9 2026 xuyongan Agent. All rights reserved."
+    footer-custom-content: "\u00A9 2026 xya Agent. All rights reserved."
 
 # LangChain4j - AI 模型配置
 langchain4j:
   open-ai:
     chat-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
-      model-name: qwen3.7-max-2026-06-08 # 模型名称
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: sk-ws-H.PLIPPYY.baHS.MEQCICOpbcDY3AqXQrx6R--A4xbi9HpLyI-LPx1z_ArWcJfDAiADhDT9yKl63ZuaMkrFxuIW0D7qDsq6cuGWsDzXQAFzkw
+      model-name: qwen3.7-flash-2026-07-15 # 模型名称
       log-requests: true
       log-responses: true
     streaming-chat-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
-      model-name: qwen3.7-max-2026-06-08 # 模型名称
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: sk-ws-H.PLIPPYY.baHS.MEQCICOpbcDY3AqXQrx6R--A4xbi9HpLyI-LPx1z_ArWcJfDAiADhDT9yKl63ZuaMkrFxuIW0D7qDsq6cuGWsDzXQAFzkw
+      model-name: qwen3.7-flash-2026-07-15 # 模型名称
       log-requests: true
       log-responses: true
     embedding-model:
-      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1 # 模型路径
-      api-key: sk-ws-H.EYXRHMX.OyjP.MEYCIQCWdAilCbYlTJaEyqjUFQ-yagyklDIbkhBpnB4Gdo8bBAIhAN3LaBKJ094bO4p-r-z--DepiWavl-uGxrFrsdk-2MPX # ApiKey
+      base-url: https://ws-76oodhceizmh1cfm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: sk-ws-H.PLIPPYY.baHS.MEQCICOpbcDY3AqXQrx6R--A4xbi9HpLyI-LPx1z_ArWcJfDAiADhDT9yKl63ZuaMkrFxuIW0D7qDsq6cuGWsDzXQAFzkw
       model-name: qwen3.7-text-embedding # 模型名称
       log-requests: true
       log-responses: true

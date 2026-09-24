@@ -117,6 +117,7 @@ com\tianji\agent\model\vo\LoginLogVO$LoginLogVOBuilder.class
 com\tianji\agent\mapper\LoginLogMapper.class
 com\tianji\agent\model\vo\LoginVO.class
 com\tianji\agent\service\impl\KnowledgeServiceImpl.class
+com\tianji\agent\config\common\OperationLogUtil.class
 com\tianji\agent\model\vo\AgentUsageVO.class
 com\tianji\agent\service\impl\SetupServiceImpl.class
 com\tianji\agent\config\crypto\AesProperties.class
